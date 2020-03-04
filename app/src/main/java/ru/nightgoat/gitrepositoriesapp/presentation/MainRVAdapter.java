@@ -14,7 +14,7 @@ import java.util.List;
 import ru.nightgoat.gitrepositoriesapp.R;
 import ru.nightgoat.gitrepositoriesapp.data.api.RepModel;
 
-public class MainRVadapter extends RecyclerView.Adapter<MainRVadapter.ViewHolder> {
+public class MainRVAdapter extends RecyclerView.Adapter<MainRVAdapter.ViewHolder> {
 
     private List<RepModel> data = new ArrayList<>();
 

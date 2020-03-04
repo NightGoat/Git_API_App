@@ -4,18 +4,18 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetroiftModel {
+public class RetrofitModel {
 
-    private static RetroiftModel INSTANCE = null;
+    private static RetrofitModel INSTANCE = null;
     private GitHubApi API;
 
-    private RetroiftModel() {
+    private RetrofitModel() {
         API = createAdaper();
     }
 
-    public static RetroiftModel getInstance(){
+    public static RetrofitModel getInstance(){
         if (INSTANCE == null) {
-            INSTANCE = new RetroiftModel();
+            INSTANCE = new RetrofitModel();
         }
         return INSTANCE;
     }

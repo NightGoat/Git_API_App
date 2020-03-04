@@ -13,9 +13,7 @@ import ru.nightgoat.gitrepositoriesapp.data.api.RepModel;
 public interface MainView extends MvpView {
 
     void setAdapter(List<RepModel> repos);
-
     void setUser(RepModel.Owner owner);
-
     void startProgressBar();
     void stopProgressBar();
 }
