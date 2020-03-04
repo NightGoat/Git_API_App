@@ -8,7 +8,6 @@ import java.util.List;
 
 import ru.nightgoat.gitrepositoriesapp.data.api.RepModel;
 
-
 @StateStrategyType(AddToEndSingleStrategy.class)
 public interface MainView extends MvpView {
 
