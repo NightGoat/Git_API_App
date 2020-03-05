@@ -38,7 +38,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
     private TextView nicknameTV;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
-    private MainRVadapter mAdapter;
+    private MainRVAdapter mAdapter;
     private String user;
 
     @Override
@@ -70,7 +70,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
 
     private void initRecycler() {
         LinearLayoutManager manager = new LinearLayoutManager(this);
-        mAdapter = new MainRVadapter();
+        mAdapter = new MainRVAdapter();
         recyclerView.setAdapter(mAdapter);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(manager);

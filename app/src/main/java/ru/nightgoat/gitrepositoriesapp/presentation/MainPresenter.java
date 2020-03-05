@@ -35,7 +35,9 @@ public class MainPresenter extends MvpPresenter<MainView> {
     void getRepos(String user){
         view = getViewState();
         view.startProgressBar();
-        disposable.add(model.getRepos(user).observeOn(AndroidSchedulers.mainThread()).subscribeWith(new DisposableSingleObserver<List<RepModel>>() {
+        disposable.add(model.getRepos(user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(new DisposableSingleObserver<List<RepModel>>() {
             @Override
             public void onSuccess(List<RepModel> repModels) {
                 view.setAdapter(repModels);
@@ -45,6 +47,7 @@ public class MainPresenter extends MvpPresenter<MainView> {
 
             @Override
             public void onError(Throwable e) {
+                view.stopProgressBar();
                 Log.w(TAG, "onError: " + e.getMessage());
             }
         }));

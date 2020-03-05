@@ -5,9 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class RepModel {
 
-    @SerializedName("id")
-    @Expose
-    public int id;
     @SerializedName("name")
     @Expose
     public String name;
@@ -26,9 +23,6 @@ public class RepModel {
         @SerializedName("login")
         @Expose
         public String login;
-        @SerializedName("id")
-        @Expose
-        public int id;
         @SerializedName("avatar_url")
         @Expose
         public String avatarUrl;
